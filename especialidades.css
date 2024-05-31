@@ -1,0 +1,164 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+    font-family: source sans pro;
+    color: #0000008c;
+    
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+/* secao cabecalho*/
+header
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+
+    background-color: #00cad1;
+    
+    
+}
+
+header img 
+{
+    width: 150px;
+}
+
+header nav 
+{
+    font-size: 18px;
+}
+
+header a 
+{
+    margin: 0 5px;
+    text-decoration: none;
+    color: #000;
+    padding: 5px;
+}
+
+header, a:hover
+{
+    color:#000;
+}
+
+/*Secao principal*/
+
+.links-especialidade
+{
+ display: flex;
+ justify-content: center;
+ width: 100%;
+ align-items: center;
+
+}
+
+.links-especialidade a
+{
+    text-decoration:none;  
+    border-bottom: 2px solid #00cad1;
+    margin: 0 10px 10px;
+
+}
+
+.titulo-especialidades
+{
+text-align: center;
+}
+
+.secao-sobre-especialidades
+{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    align-items: center;
+    
+}
+
+/*secao tabelas*/
+
+.box-tabela-especialista {
+    display: flex;
+    height: 240px;
+    padding: 0 20px;
+  }
+
+  .box-tabela-especialista img {
+    width: 30%;
+    height: 100%;
+  }
+
+  @media (max-width: 768px)
+   {
+    .box-tabela-especialista img 
+    {
+      display: none;
+    }
+}
+
+.table-especialidades 
+{
+  border-spacing: 0;
+  text-align: left;
+  width: 70%;
+  height: 100%;
+}
+
+
+.table-especialidades thead tr
+{
+  background-color: #00cad1;
+  color: #fff;
+}
+
+.table-especialidades tr
+{
+    background-color: #f1f1f1;
+    color: #585757;
+    font-weight: 500;
+}
+
+.table-especialidades tbody tr:nth-of-type(2n+1)
+{
+    background-color: #cdcdcd;
+    border: 1px solid #f1f1f1;
+}
+
+.table-especialidades th , .table-especialidades td
+{
+    padding: 10px;
+
+}
+
+.tabela-especialistas {
+    width: 100%;
+  }
+
+  .box-tabela-especialista {
+    height: auto;
+    justify-content: center;
+  }
+
+
+@media ( max-width: 425px) {
+  .box-tabela-especialista {
+    padding: 0;
+  }
+}
+/* secao rodape*/
+footer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    align-items: center;
+
+    background-color: #0d6e71;
+    color: #fff;
+}
