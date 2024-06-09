@@ -78,6 +78,7 @@ section
 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 50px 20px;
     align-items: center;
 }
@@ -134,7 +135,7 @@ section
     
     width: 12%;
     margin: auto;
-    padding:10px;
+    padding:10px 50px;
 }
 
 .horarios a
@@ -145,14 +146,51 @@ section
     text-transform: uppercase;
     padding: 10px 20px;
     text-decoration: none;
+    text-align: center;
 
 }
 
-@media (max-width: 425px) {
-    .topo .container { flex-direction: column; }
-    .topo-titulo { margin: 10px 0; }
-    .topo-links { width: 100%; border-top: 1px solid #009fa5; justify-content: space-around;}
+@media (max-width: 412px) 
+{
+
+ .secao-sobre
+ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+
+ .secao-sobre p
+ {
+    text-align: center;
+ }
+
+ .secao-sobre h2
+ {
+    text-align: center;
+ }
+
+ .secao-especialidades img
+  {
+    width: 300px;
+    height: 250px;
   }
+
+ .lista
+ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+    
+ .lista img
+ {
+    display: none;
+ }
+
+
+    
+}
 
 
 /* secao rodape*/

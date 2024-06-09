@@ -87,12 +87,12 @@ text-align: center;
 .box-tabela-especialista {
     display: flex;
     height: 240px;
-    padding: 0 20px;
+    padding: 30px 20px;
   }
 
   .box-tabela-especialista img {
     width: 30%;
-    height: 100%;
+    height: auto;
   }
 
   @media (max-width: 768px)
@@ -147,9 +147,23 @@ text-align: center;
   }
 
 
-@media ( max-width: 425px) {
-  .box-tabela-especialista {
-    padding: 0;
+@media ( max-width: 412px) 
+{
+  .links-especialidade 
+  {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .box-tabela-especialista
+  {
+    padding: 50px;
+  }
+
+  .secao-sobre-especialidades p
+  {
+    text-align: center;
   }
 }
 /* secao rodape*/
