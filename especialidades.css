@@ -3,8 +3,11 @@ body
     margin: 0;
     padding: 0;
     font-family: source sans pro;
-    color: #0000008c;
-    
+    color: #0000008c;    
+}
+
+main {
+  margin-bottom: 200px;
 }
 
 *
@@ -20,10 +23,7 @@ header
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
-
     background-color: #00cad1;
-    
-    
 }
 
 header img 
@@ -44,7 +44,7 @@ header a
     padding: 5px;
 }
 
-header, a:hover
+header a:hover
 {
     color:#000;
 }
@@ -55,6 +55,7 @@ header, a:hover
 {
  display: flex;
  justify-content: center;
+ flex-wrap: wrap;
  width: 100%;
  align-items: center;
 
@@ -62,10 +63,16 @@ header, a:hover
 
 .links-especialidade a
 {
+    color: #000;
+    font-size: 22px;
     text-decoration:none;  
     border-bottom: 2px solid #00cad1;
-    margin: 0 10px 10px;
+    margin: 15px 10px 20px;
 
+}
+
+.links-especialidade a:hover {
+  opacity: 0.8;
 }
 
 .titulo-especialidades
@@ -82,26 +89,35 @@ text-align: center;
     
 }
 
+.secao-sobre-especialidades h3 {
+  font-size: 28px;
+  margin: 25px 0;
+}
+
+.secao-sobre-especialidades p {
+  width: 80%;
+  text-align: center;
+  font-size: 22px;
+}
+
 /*secao tabelas*/
+
+.box-tabela-especialista table {
+  border-spacing: 0;
+  width: 70%;
+}
 
 .box-tabela-especialista {
     display: flex;
+    justify-content: center;
     height: 240px;
-    padding: 30px 20px;
+    margin: 30px auto;
   }
 
   .box-tabela-especialista img {
-    width: 30%;
-    height: auto;
+    width: 20%;
+  
   }
-
-  @media (max-width: 768px)
-   {
-    .box-tabela-especialista img 
-    {
-      display: none;
-    }
-}
 
 .table-especialidades 
 {
@@ -112,67 +128,64 @@ text-align: center;
 }
 
 
-.table-especialidades thead tr
+.table-especialidades th
 {
   background-color: #00cad1;
   color: #fff;
+  font-size: 18px;
 }
 
-.table-especialidades tr
+.table-especialidades tr, th, td
 {
-    background-color: #f1f1f1;
-    color: #585757;
-    font-weight: 500;
+  padding: 10px;
+  text-align: justify;
 }
 
-.table-especialidades tbody tr:nth-of-type(2n+1)
+.table-especialidades tbody tr:nth-child(odd)
 {
     background-color: #cdcdcd;
     border: 1px solid #f1f1f1;
 }
 
-.table-especialidades th , .table-especialidades td
-{
-    padding: 10px;
-
-}
 
 .tabela-especialistas {
     width: 100%;
   }
 
-  .box-tabela-especialista {
-    height: auto;
-    justify-content: center;
-  }
-
-
-@media ( max-width: 412px) 
-{
-  .links-especialidade 
-  {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  .box-tabela-especialista
-  {
-    padding: 50px;
-  }
-
-  .secao-sobre-especialidades p
-  {
-    text-align: center;
-  }
-}
 /* secao rodape*/
 footer{
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
     align-items: center;
-
-    background-color: #0d6e71;
+    background-color: #128e92;
     color: #fff;
+}
+
+@media (max-width: 768px)
+{
+ .box-tabela-especialista img 
+ {
+   display: none;
+ }
+}
+
+@media ( max-width: 412px) 
+{
+.links-especialidade 
+{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.box-tabela-especialista
+{
+  padding: 50px;
+}
+
+.secao-sobre-especialidades p
+{
+  text-align: center;
+}
 }

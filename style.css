@@ -1,50 +1,41 @@
-body 
-{
-    margin: 0;
-    padding: 0;
-    font-family: source sans pro;
+
+body {
     color: #0000008c;
-    
 }
 
 *
 {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro';
 }
 
 /* secao cabecalho*/
-header
+.cabecalho
 {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
     align-items: center;
-    padding: 10px 15px;
-
+    flex-wrap: wrap;
     background-color: #00cad1;
-    
-    
 }
 
-header img 
+.cabecalho img 
 {
     width: 150px;
 }
 
-header nav 
+.cabecalho a 
 {
-    font-size: 18px;
-}
-
-header a 
-{
-    margin: 0 5px;
+    font-size: 20px;
     text-decoration: none;
     color: #000;
     padding: 5px;
 }
 
-header, a:hover
+.cabecalho a:hover
 {
     color:#fff;
 }
@@ -57,10 +48,11 @@ section
 
 .container-title
 {
-    position: relative;
     background-image: url('assets/recepcao.png');
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;    
     width: 100%;
     height: 500px;
     color: #fff;
@@ -71,7 +63,7 @@ section
   font-weight: 500;
   text-transform: uppercase;
   font-size: 38px;
-  margin: 0;
+  margin-left: 150px;
 }
 
 .secao-sobre
@@ -94,60 +86,47 @@ section
 }
 .secao-especialidades {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
   }
 
-  .secao-especialidades {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .secao-especialidades figure {
+  .card {
     display: flex;
     flex-direction: column; 
-    align-items: center; /* Centraliza os itens horizontalmente */
-    margin-bottom: 20px; /* Espaçamento entre as figuras */
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 12px #000; 
+    border-radius: 12px;
   }
 
-  .secao-especialidades img
+  .card img
   {
-    width: 400px;
-    height: 300px;
+    width: 360px;
   }
-  
-  .secao-especialidades figcaption {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    text-align: center;
+
+  .card figcaption {
+    margin-top: 8px;
+    font-size: 26px;
   }
   
   
-.lista
+  
+.lista, .horarios
 {
     display: flex;
 }
 
-.horarios
-{
-    display:flex ;
-    justify-content: center;
-    
-    width: 12%;
-    margin: auto;
-    padding:10px 50px;
-}
-
-.horarios a
-{
+.horarios a {
     background-color: #00cad1;
-    color: #fff;
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: 10px 20px;
+    padding: 16px;
+    border-radius: 8px;
     text-decoration: none;
+    font-size: 22px;
+    color: #fff;
     text-align: center;
-
+    margin: auto;
 }
 
 @media (max-width: 412px) 
@@ -163,6 +142,7 @@ section
  .secao-sobre p
  {
     text-align: center;
+    font-size: 18px;
  }
 
  .secao-sobre h2
@@ -197,9 +177,31 @@ section
 footer{
     display: flex;
     flex-direction: column;
-    padding: 10px 20px;
     align-items: center;
-
+    justify-content: space-around;
     background-color: #0d6e71;
     color: #fff;
+}
+
+footer p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+
+@media (max-width: 680px) {
+
+    .container-title h1 {
+        margin: 0 auto;
+    }
+
+    .lista img {
+        display: none;
+    }
+}
+
+@media (max-width:523px) {
+    .cabecalho img {
+        border-bottom: 2px solid;
+    }
 }
